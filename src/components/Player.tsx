@@ -1,15 +1,21 @@
+
 type playerProps = {
     name: string
     wins: number
     turn: boolean
+    isWinner: boolean
+    
 }
 
-export default function Player({name, wins, turn}: playerProps){
+export default function Player({name, wins, turn, isWinner}: playerProps){
+
 
     const turnClass = turn ? `player${name} ${name}On` : `player${name}`
 
+    const winnerClass = isWinner ? `winnerPlayer` : ``
+
     return (
-        <div className={`${turnClass} flex flex-col items-center p-8 rounded-lg bg-slate-950 border border-slate-900 hover:bg-gradient-to-br hover:from-slate-800 hover:to-slate-950`}>
+        <div className={`${turnClass} ${winnerClass} flex flex-col items-center p-8 rounded-lg bg-slate-950 border border-slate-900 `}>
             <div className='mb-4 '>
                 <img className='w-20 h-20' src={`/src/assets/${name}.svg`} alt="React Logo" />
             </div>

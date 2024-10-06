@@ -7,6 +7,8 @@ function App() {
 
   const [playingGame, setPlayingGame] = useState(true)
   const [turn, setTurn] = useState('react')
+  const [winner,setWinner] = useState(null)
+  const [playerWinner, setPlayerWinner] = useState(null)
 
   return (
     <>
@@ -14,9 +16,9 @@ function App() {
   
         <Header playingGame={playingGame}/>
         
-        <MainSection playingGame={playingGame} setPlayingGame={setPlayingGame} turn={turn} setTurn={setTurn}/>
+        <MainSection playingGame={playingGame} setPlayingGame={setPlayingGame} turn={turn} setTurn={setTurn} winner={winner} setWinner={setWinner} setPlayerWinner={setPlayerWinner} />
 
-        {!playingGame ? <Footer turn={turn} /> : '' }
+        {!playingGame ? <Footer turn={turn} playerWinner={playerWinner} /> : '' }
 
       </article>
     </>

@@ -14,16 +14,36 @@
 }
 
 
-.playerreact:hover, .reactOn{
+.reactOn{
   border: 1px solid #57e6ff
 }
-.playerangular:hover, .angularOn{
-  border: 1px solid #ff5462
+ .angularOn{
+  border: 1px solid #fd2a3b
 }
 
-.playerreact:hover img, .reactOn img{
-  filter: drop-shadow(0 0 2em #80ffffc7);
+ .reactOn img{
+  filter: drop-shadow(0 0 2em #80ffff);
 }
-.playerangular:hover img, .angularOn img{
-  filter: drop-shadow(0 0 2em #ff5462);
+.angularOn img{
+  filter: drop-shadow(0 0 2em #fd2a3b);
+}
+
+
+.reactOnBoard{
+  border: 1px solid #57e6ff
+}
+.angularOnBoard{
+  border: 1px solid #fd2a3b
+}
+.reactOnBoard img{
+  filter: drop-shadow(0 0 0.7em #80ffffc7);
+}
+.angularOnBoard img{
+  filter: drop-shadow(0 0 0.7em #fd2a3b);
+}
+
+.verdeGana, .verdeGana:hover, .winnerPlayer, .winnerPlayer:hover{
+  background-color: #88ff88 !important;
+  border: 1px solid #2dc000 !important;
+  filter: drop-shadow(0 0 2em #2dc000) !important;
 }
