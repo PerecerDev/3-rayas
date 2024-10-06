@@ -78,7 +78,7 @@ export default function Square( { children, index, turn, setTurn, board, winner,
             onClick={handleClick}
             className={`${children}OnBoard w-24 h-24 flex justify-center items-center text-blue-950 text-xl rounded-lg border border-slate-500 bg-slate-800 ${verdeGana} hover:bg-slate-700 hover:border-yellow-500 cursor-cell hover:shadow-[0px_0px_30px_0px] hover:shadow-yellow-200/30`}
         >
-            {children ? <img className="w-10 h-10" src={`/src/assets/${children}.svg`} alt="React Logo" /> : ''}
+            {children ? <img className="w-10 h-10" src={`${children}.svg`} alt="React Logo" /> : ''}
             
         </div>
     )
