@@ -4,9 +4,11 @@ import StartButton from "./StartButton"
 type MainSectionProps = {
     playingGame: boolean
     setPlayingGame: CallableFunction
-}
+    turn: string
+    setTurn: (newTurn: string) => void
+  }
 
-export default function MainSection({playingGame, setPlayingGame}: MainSectionProps){
+export default function MainSection({playingGame, setPlayingGame, turn, setTurn}: MainSectionProps){
 
     const handleStartClick = () => setPlayingGame(!playingGame)
 
@@ -15,7 +17,7 @@ export default function MainSection({playingGame, setPlayingGame}: MainSectionPr
           {
             playingGame
             ? <StartButton onClick={handleStartClick} />
-            : <Board />
+            : <Board turn={turn} setTurn={setTurn}/>
           }
           
         </section>

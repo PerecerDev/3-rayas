@@ -12,3 +12,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+.playerreact:hover, .reactOn{
+  border: 1px solid #57e6ff
+}
+.playerangular:hover, .angularOn{
+  border: 1px solid #ff5462
+}
+
+.playerreact:hover img, .reactOn img{
+  filter: drop-shadow(0 0 2em #80ffffc7);
+}
+.playerangular:hover img, .angularOn img{
+  filter: drop-shadow(0 0 2em #ff5462);
+}
