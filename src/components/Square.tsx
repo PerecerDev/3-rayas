@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import { ReactNode, useEffect } from "react"
 
 type SquareProps = {
     children: ReactNode
@@ -66,9 +66,12 @@ export default function Square( { children, index, turn, setTurn, board, winner,
         
         
     }
-    if(winner) {
-        setTurn(null)
-    }
+    useEffect(() => {
+        if (winner) {
+            setTurn(null);
+        }
+    }, [winner, setTurn]);
+    
 
     return(
         <div
